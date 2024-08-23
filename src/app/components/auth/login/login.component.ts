@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth/auth.service';
 
@@ -8,12 +9,23 @@ import { AuthService } from 'src/app/services/auth/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  form: any = {};
+  loginForm: FormGroup;
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router, private fb: FormBuilder) {
+    this.loginForm = this.fb.group({
+      username: ['', Validators.required],
+      password: ['', Validators.required]
+    });
+  }
+
+  onLogin() {
+    if (this.loginForm.valid) {
+      this.onSubmit();
+    }
+  }
 
   onSubmit() {
-    this.authService.login(this.form).subscribe(
+    this.authService.login(this.loginForm).subscribe(
       resp => {
         alert('Login realizado com sucesso!');
         localStorage.setItem('user', JSON.stringify(resp));

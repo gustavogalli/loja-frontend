@@ -1,1 +1,26 @@
-<p>cadastrar works!</p>
+<mat-card class="registration-card">
+    <mat-card-title>Cadastro</mat-card-title>
+    <mat-card-content>
+      <form (ngSubmit)="onRegister()">
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Nome de usuário</mat-label>
+          <input [(ngModel)]="usuario.username" name="username" matInput placeholder="Digite seu nome completo" equired>
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Senha</mat-label>
+          <input [(ngModel)]="usuario.password" name="password" matInput type="password" placeholder="Digite sua senha" required>
+        </mat-form-field>
+  
+        <!-- <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Confirmar Senha</mat-label>
+          <input matInput type="password" placeholder="Confirme sua senha" formControlName="confirmPassword" required>
+        </mat-form-field> -->
+  
+        <button mat-raised-button color="primary" type="submit">Cadastrar</button>
+        <button mat-raised-button color="primary" type="submit" routerLink="/login">Ir para Login</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  
