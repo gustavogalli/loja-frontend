@@ -1,24 +1,18 @@
 <mat-card class="login-card">
     <mat-card-title>Login</mat-card-title>
     <mat-card-content>
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <form (ngSubmit)="onSubmit()">
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>Usuário</mat-label>
-          <input matInput placeholder="Digite seu usuário" formControlName="username" required>
-          <mat-error *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
-            O nome de usuário é obrigatório
-          </mat-error>
+          <input [(ngModel)]="usuario.username" name="username" matInput placeholder="Digite seu usuário" required>
         </mat-form-field>
   
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>Senha</mat-label>
-          <input matInput type="password" placeholder="Digite sua senha" formControlName="password" required>
-          <mat-error *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
-            A senha é obrigatória
-          </mat-error>
+          <input [(ngModel)]="usuario.password" name="password" matInput type="password" placeholder="Digite sua senha"required>
         </mat-form-field>
   
-        <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">Entrar</button>
+        <button mat-raised-button color="primary" type="submit">Entrar</button>
         <button mat-raised-button color="primary" type="submit" routerLink="/cadastrar">Cadastrar</button>
       </form>
     </mat-card-content>

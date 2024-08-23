@@ -17,8 +17,8 @@ export class CadastrarComponent {
   onRegister(){
     console.log(this.usuario)
     this.authService.register(this.usuario).subscribe(resp => {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/login']);
     })
   }
-  
+
 }
