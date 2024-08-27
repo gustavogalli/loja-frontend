@@ -1,0 +1,25 @@
+mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .toolbar-title {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .toolbar-nav {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .toolbar-user {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .toolbar-button {
+    margin: 0 25px;
+  }

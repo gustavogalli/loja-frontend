@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" *ngIf="isUserLoggedIn()">
+    <!-- Nome da Loja -->
+    <span class="toolbar-title" routerLink="/home">Loja online</span>
+  
+    <!-- Links de Navegação -->
+    <div class="toolbar-nav">
+      <a class="toolbar-button" mat-button routerLink="/home">Home</a>
+      <a class="toolbar-button" mat-button routerLink="/produtos">Produtos</a>
+      <a class="toolbar-button" mat-button routerLink="/carrinho">Meu Carrinho</a>
+      <a class="toolbar-button" mat-button routerLink="/pedidos">Meus Pedidos</a>
+    </div>
+  
+    <!-- Nome do Cliente -->
+    <span class="toolbar-user">{{ customerUsername }}</span>
+  </mat-toolbar>
+  
