@@ -18,7 +18,7 @@ export class LoginComponent {
     localStorage.clear();
   }
 
-  onSubmit() {
+  login() {
     this.authService.login(this.usuario).subscribe(
       resp => {
         alert('Login realizado com sucesso!');
