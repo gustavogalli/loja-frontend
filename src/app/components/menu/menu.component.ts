@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Usuario } from 'src/app/models/Usuario';
 import { AuthService } from 'src/app/services/auth/auth.service';
 
 @Component({
@@ -10,12 +11,14 @@ export class MenuComponent {
 
   constructor(private authService: AuthService){}
 
-  customerUsername: string | null = null;
+  usuario: Usuario = new Usuario();
 
   ngOnInit(){
-    const user = JSON.parse(localStorage.getItem('user') || '{}');
-    this.customerUsername = user.username;
-
+    const userData = localStorage.getItem('user');
+    if (userData) {
+      this.usuario = JSON.parse(userData);
+    }
+  
   }
 
   isUserLoggedIn(): boolean {
