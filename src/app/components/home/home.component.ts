@@ -8,16 +8,4 @@ import { Usuario } from 'src/app/models/Usuario';
 })
 export class HomeComponent {
 
-  usuario: Usuario = new Usuario();
-
-  ngOnInit(){
-    const userData = localStorage.getItem('user');
-    if (userData) {
-      this.usuario = JSON.parse(userData);
-      console.log("=============================")
-      console.log(this.usuario)
-    }
-  
-  }
-
 }
