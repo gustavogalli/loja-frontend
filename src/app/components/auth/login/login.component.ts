@@ -14,6 +14,10 @@ export class LoginComponent {
 
   constructor(private authService: AuthService, private router: Router) {}
 
+  ngOnInit(){
+    localStorage.clear();
+  }
+
   onSubmit() {
     this.authService.login(this.usuario).subscribe(
       resp => {

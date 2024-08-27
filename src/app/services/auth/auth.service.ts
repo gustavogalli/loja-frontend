@@ -11,6 +11,10 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
+  isLoggedIn(): boolean{
+    return !!localStorage.getItem('user');
+  }
+
   register(user: Usuario): Observable<Usuario> {
     return this.http.post<Usuario>(`${this.apiUrl}/cadastrar`, user);
   }
