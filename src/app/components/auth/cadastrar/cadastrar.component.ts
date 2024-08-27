@@ -14,7 +14,11 @@ export class CadastrarComponent {
 
   constructor(private authService: AuthService, private router: Router){}
 
-  onRegister(){
+  ngOnInit(){
+    localStorage.clear();
+  }
+
+  cadastrar(){
     console.log(this.usuario)
     this.authService.register(this.usuario).subscribe(resp => {
       this.router.navigate(['/login']);
