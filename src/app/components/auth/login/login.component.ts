@@ -21,7 +21,7 @@ export class LoginComponent {
   login() {
     this.authService.login(this.usuario).subscribe(
       resp => {
-        alert('Login realizado com sucesso!');
+        // alert('Login realizado com sucesso!');
         localStorage.setItem('user', JSON.stringify(resp));
         this.router.navigate(['/home']);
       },

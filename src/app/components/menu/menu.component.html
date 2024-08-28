@@ -10,7 +10,6 @@
       <a class="toolbar-button" mat-button routerLink="/pedidos">Meus Pedidos</a>
     </div>
   
-    <!-- Nome do Cliente -->
-    <span class="toolbar-user">{{ usuario.username }}</span>
+    <a (click)="logout()" mat-button class="toolbar-logout">Sair</a>
+    <!-- <span class="toolbar-user">{{ usuario.username }}</span> -->
   </mat-toolbar>
-  

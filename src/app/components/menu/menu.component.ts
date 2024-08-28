@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Usuario } from 'src/app/models/Usuario';
 import { AuthService } from 'src/app/services/auth/auth.service';
 
@@ -9,7 +10,7 @@ import { AuthService } from 'src/app/services/auth/auth.service';
 })
 export class MenuComponent {
 
-  constructor(private authService: AuthService){}
+  constructor(private authService: AuthService, private dialog: MatDialog){}
 
   usuario: Usuario = new Usuario();
 
@@ -23,6 +24,10 @@ export class MenuComponent {
 
   isUserLoggedIn(): boolean {
     return this.authService.isLoggedIn();
+  }
+
+  logout(){
+    this.authService.logout()
   }
 
 }

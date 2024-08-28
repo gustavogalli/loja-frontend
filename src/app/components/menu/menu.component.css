@@ -1,25 +1,31 @@
 mat-toolbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .toolbar-title {
-    flex: 1;
-    text-align: left;
-  }
-  
-  .toolbar-nav {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .toolbar-user {
-    flex: 1;
-    text-align: right;
-  }
-  
-  .toolbar-button {
-    margin: 0 25px;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.toolbar-title {
+  position: absolute;
+  left: 0;
+  margin-left: 16px;
+}
+
+.toolbar-nav {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.toolbar-logout {
+  position: absolute;
+  right: 0;
+  margin-right: 16px;
+  font-size: 0.8rem; /* Ajusta o tamanho do texto */
+  padding: 4px 8px; /* Torna o botão menor */
+  min-width: 0; /* Remove o tamanho mínimo do botão */
+}
+
+.toolbar-button {
+  margin: 0 25px;
+}
