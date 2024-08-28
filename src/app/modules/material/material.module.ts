@@ -4,6 +4,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 const MaterialComponents = [
   MatButtonModule,
@@ -11,7 +13,8 @@ const MaterialComponents = [
   MatInputModule,
   MatButtonModule,
   MatCardModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatDialogModule
 ];
 
 @NgModule({

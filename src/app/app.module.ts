@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './modules/material/material.module';
 import { MenuComponent } from './components/menu/menu.component';
+import { DialogComponent } from './components/menu/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MenuComponent } from './components/menu/menu.component';
     CadastrarComponent,
     LoginComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,

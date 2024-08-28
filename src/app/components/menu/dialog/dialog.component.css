@@ -1,0 +1,7 @@
+.dialog-actions {
+    display: flex;
+    justify-content: space-evenly; /* Distribui os botões um em cada lado */
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
