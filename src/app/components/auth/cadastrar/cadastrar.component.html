@@ -8,6 +8,16 @@
       <form>
 
         <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Nome completo</mat-label>
+          <input [(ngModel)]="usuario.nome" name="nome" matInput type="text" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="full-width">
+          <mat-label>Email</mat-label>
+          <input [(ngModel)]="usuario.email" name="email" matInput type="text" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="full-width">
           <mat-label>Nome de usuário</mat-label>
           <input [(ngModel)]="usuario.username" name="username" matInput type="text" required>
         </mat-form-field>

@@ -1,10 +1,10 @@
-import { UserModel } from "./UserModel";
+import { Usuario } from "./Usuario";
 
-export interface Produto {
+export class Produto {
     id: number;
     nome: string;
     preco: number;
     descricao: string;
-    comprador?: UserModel;
-    vendedor?: UserModel;
+    comprador?: Usuario;
+    vendedor?: Usuario;
   }

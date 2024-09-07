@@ -21,6 +21,7 @@ export class CadastrarComponent {
   cadastrar(){
     console.log(this.usuario)
     this.authService.register(this.usuario).subscribe(resp => {
+      alert(`Usuário ${this.usuario.nome} cadastrado com sucesso!`)
       this.router.navigate(['/login']);
     })
   }
