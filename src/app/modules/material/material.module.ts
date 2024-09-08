@@ -5,6 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatListModule } from '@angular/material/list';
 
 
 const MaterialComponents = [
@@ -14,7 +15,8 @@ const MaterialComponents = [
   MatButtonModule,
   MatCardModule,
   MatToolbarModule,
-  MatDialogModule
+  MatDialogModule,
+  MatListModule
 ];
 
 @NgModule({

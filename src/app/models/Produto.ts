@@ -5,6 +5,7 @@ export class Produto {
     nome: string;
     preco: number;
     descricao: string;
+    categoria: string;
     comprador?: Usuario;
     vendedor?: Usuario;
   }

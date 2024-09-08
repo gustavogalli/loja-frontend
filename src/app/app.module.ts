@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './modules/material/material.module';
 import { MenuComponent } from './components/menu/menu.component';
 import { DialogComponent } from './components/menu/dialog/dialog.component';
+import { ProdutosComponent } from './components/produtos/produtos.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DialogComponent } from './components/menu/dialog/dialog.component';
     LoginComponent,
     HomeComponent,
     MenuComponent,
-    DialogComponent
+    DialogComponent,
+    ProdutosComponent
   ],
   imports: [
     BrowserModule,
