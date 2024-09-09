@@ -1,0 +1,36 @@
+/* Estilo para o contêiner da lista */
+mat-list {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #c4668b;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para cada item da lista */
+  mat-list-item {
+    padding: 15px;
+    margin-bottom: 8px;
+    background-color: c4668b;
+    border-radius: 4px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  /* Efeito hover para cada item */
+  mat-list-item:hover {
+    background-color: #bd4a78;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilo do texto do item */
+  mat-list-item span {
+    color: #424242;
+  }
+  
