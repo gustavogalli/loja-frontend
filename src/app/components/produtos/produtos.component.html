@@ -1,5 +1,17 @@
+<mat-form-field>
+  <mat-label>Categorias</mat-label>
+  <mat-select (selectionChange)="onCategoriaSelecionada($event.value)">
+    <mat-option>
+        
+    </mat-option>
+    <mat-option *ngFor="let categoria of categorias" [value]="categoria">
+        {{ categoria }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
 <mat-list role="list">
-    <mat-list-item role="listitem" *ngFor="let produto of produtos">
+    <mat-list-item role="listitem" *ngFor="let produto of produtosFiltrados">
         {{ produto.nome }}
     </mat-list-item>
 </mat-list>

@@ -14,4 +14,12 @@ export class ProdutosService {
   getProdutos(): Observable<Produto[]>{
     return this.http.get<Produto[]>(`${this.apiUrl}`, { withCredentials: true });
   }
+
+  getCategorias(): Observable<string[]>{
+    return this.http.get<string[]>(`${this.apiUrl}/categoria`, { withCredentials: true });
+  }
+
+  // getProdutosByCategoria(categoria: string): Observable<Produto[]>{
+  //   return this.http.get<Produto[]>(`${this.apiUrl}/categoria/${categoria}`, { withCredentials: true });
+  // }
 }
